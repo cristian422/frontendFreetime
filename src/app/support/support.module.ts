@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {SupportComponent} from './supportRequest/support.component';
-import { RouterModule, Routes} from '@angular/router';
+import { SupportComponent } from './supportRequest/support.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';  // Importa FormsModule
+
 const routes: Routes = [
   {
     path: 'support',
@@ -12,7 +14,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule  // Asegúrate de que FormsModule esté en los imports
   ]
 })
-export class SeguridadModule { }
+export class SupportModule { }

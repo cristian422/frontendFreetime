@@ -1,119 +1,136 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-  }
-  
-  .container {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border: 2px solid #d10000;
-      border-radius: 10px;
-  }
-  
-  .logo {
-      text-align: center;
-      margin-bottom: 20px;
-  }
-  
-  .logo img {
-      width: 50px;
-      vertical-align: middle;
-  }
-  
-  h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 24px;
-      color: #d10000;
-  }
-  
-  .form-group {
-      margin-bottom: 15px;
-  }
-  
-  label {
-      font-size: 14px;
-      color: #333;
-      display: block;
-      margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  select,
-  textarea {
-      width: 100%;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-  }
-  
-  select {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-  }
-  
-  textarea {
-      resize: none;
-  }
-  
-  .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px; /* Aumenta la separación entre los botones */
-      margin-top: 20px;
-  }
-  
-  .btn {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      cursor: pointer;
-      text-align: center;  /* Para centrar el texto */
-    display: inline-block; /* Asegura que los enlaces se comporten como botones */
-    text-decoration: none; /* Quitar subrayado de los enlaces */
-    background-color: #d10000; /* Color de fondo común */
 }
-  
-  .cancel {
-      background-color: #d10000;
-  }
-  
-  .submit {
-      background-color: #d10000;
-  }
-  
-  .btn:hover {
-      opacity: 0.8;
-  }
-  
-  .spacer {
-      height: 110px;
-  }
-  
-  .form-group {
-      margin-bottom: 10px; /* Reduce el espacio entre campos */
-  }
-  
-  #topic {
-      margin-top: 0; /* Elimina cualquier margen superior */
-  }
-  
-  textarea {
-      resize: none;
-      height: 150px; /* Ajusta esta altura según lo que necesites */
-  }
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px; /* Redondeo de bordes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #d10000; /* Borde rojo, similar al original */
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 180px;
+    vertical-align: middle;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px; /* Aumenta el tamaño del título */
+    color: #d10000;
+    font-weight: 700; /* Negrita más fuerte */
+    font-family: 'Montserrat', sans-serif; /* Fuente elegante */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Lora', serif; /* Fuente elegante para las etiquetas */
+}
+
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #d10000;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    background-color: #d10000;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #b00000;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cancel {
+    background-color: #d1d1d1;
+}
+
+.cancel:hover {
+    background-color: #c0c0c0;
+}
+
+.spacer {
+    height: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#topic {
+    margin-top: 0;
+}
+

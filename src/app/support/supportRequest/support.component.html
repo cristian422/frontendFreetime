@@ -1,43 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitud de Soporte</title>
-    <link rel="stylesheet" href="support.component.css">
-</head>
-<body>
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-
-        <h1>Solicitud de Soporte</h1>
-
-        <form action="#" method="post">
-            <!-- Agregar espacio vacío donde estaban los campos eliminados -->
-            <div class="spacer"></div>
-
-            <div class="form-group">
-                <label for="topic">Ingrese que desea reportar:</label>
-                <select id="topic" name="topic" >
-                    <option value="">Seleccione que tema</option>
-                    <option value="problema1">Problema 1</option>
-                    <option value="problema2">Problema 2</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="description">Describa el tema que desea reportar:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
-            </div>
-
-            <div class="buttons">
-                <button type="reset" class="btn cancel">Cancelar</button>
-                <a href="/requestcreate" class="btn submit">Enviar</a>
-            </div>
-            
-        </form>
+<div class="container">
+    <div class="logo">
+      <img src="images/logo1.png" alt="Logo">
     </div>
-</body>
-</html>
+  
+    <h1>Crear Soporte</h1>
+  
+    <form (ngSubmit)="createSupport()">
+      <div class="form-group">
+        <label for="support_description">Descripción del Soporte</label>
+        <textarea id="support_description" [(ngModel)]="supportDescription" name="support_description" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="user_id">ID de Usuario</label>
+        <input type="number" id="user_id" [(ngModel)]="userId" name="user_id" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="support_state_id">ID de Estado del Soporte</label>
+        <input type="number" id="support_state_id" [(ngModel)]="supportStateId" name="support_state_id" required />
+      </div>
+  
+      <button type="submit" class="btn submit">Crear Soporte</button>
+    </form>
+  
+    <div *ngIf="message" class="message">
+      <p>{{ message }}</p>
+    </div>
+  </div>
+  

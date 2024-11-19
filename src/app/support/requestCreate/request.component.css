@@ -27,7 +27,7 @@ body {
 }
 
 .logo img {
-    width: 50px;
+    width: 150px;
     margin-bottom: 20px;
 }
 
@@ -54,3 +54,9 @@ strong {
 .btn:hover {
     opacity: 0.9;
 }
+.support-list-container {
+    background-color: lightgray; /* Para verificar si se está renderizando */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

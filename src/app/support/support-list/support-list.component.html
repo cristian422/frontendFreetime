@@ -1,0 +1,19 @@
+<div class="support-list-container">
+    <div class="header">
+      <img src="images/logo1.png" alt="Logo Freetime" class="logo" />
+      <h2>Lista de Soportes</h2>
+    </div>
+    <div *ngIf="supports.length > 0; else noSupports">
+      <div class="support-card" *ngFor="let support of supports">
+        <h3>ID Soporte: {{ support.support_id }}</h3>
+        <p><strong>Descripción:</strong> {{ support.support_description }}</p>
+        <p><strong>Fecha:</strong> {{ support.support_date }}</p>
+        <p><strong>Estado:</strong> {{ support.support_state_id }}</p>
+        <p><strong>Usuario:</strong> {{ support.user_name }} ({{ support.user_email }})</p>
+      </div>
+    </div>
+    <ng-template #noSupports>
+      <p>No hay soportes disponibles.</p>
+    </ng-template>
+  </div>
+  

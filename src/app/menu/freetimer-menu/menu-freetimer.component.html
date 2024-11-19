@@ -1,60 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz de Tareas</title>
-    <link rel="stylesheet" href="menu-freetimer.component.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Logo -->
-        <div class="header">
-            <img src="logo.png" alt="Logo" class="logo">
-            <img src="freetimer.png" alt="FreeTimer" class="brand">
-        </div>
-        
-        <!-- Tabla de tareas -->
-        <table class="task-table">
-            <thead>
-                <tr>
-                    <th>TAREA</th>
-                    <th>EXPIRA</th>
-                    <th>$OFERTA</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Pasear perro</td>
-                    <td>23-OCT-2023</td>
-                    <td>23K COP</td>
-                </tr>
-                <tr>
-                    <td>Sacar basura</td>
-                    <td>22-OCT-2023</td>
-                    <td>5K COP</td>
-                </tr>
-                <tr>
-                    <td>Pasear perros</td>
-                    <td>21-SEP-2023</td>
-                    <td>20K COP</td>
-                </tr>
-                <tr>
-                    <td>Limpiar carro</td>
-                    <td>02-DIC-2023</td>
-                    <td>15K COP</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Botones -->
-        <div class="buttons">
-            <button class="red-button">Revisar postulaciones</button>
-            <button class="red-button">PERFIL</button>
-            <button class="red-button">PAGOS</button>
-            <button class="red-button">OFERTAS</button>
-            <button class="red-button">REPORTES</button>
-        </div>
+<div class="container">
+    <!-- Logo -->
+    <div class="header">
+      <img src="logo.png" alt="Logo" class="logo">
+      <img src="freetimer.png" alt="FreeTimer" class="brand">
     </div>
-</body>
-</html>
+  
+    <!-- Tabla de tareas -->
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th>TAREA</th>
+          <th>EXPIRA</th>
+          <th>$OFERTA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Itera sobre las tareas para mostrarlas en la tabla -->
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.task_title }}</td>
+          <td>{{ task.task_stimed_time_hours }}</td>
+          <td>{{ task.task_offer_suggested }} COP</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Botones -->
+    <div class="buttons">
+      <button class="red-button">Revisar postulaciones</button>
+      <button class="red-button">PERFIL</button>
+      <button class="red-button">PAGOS</button>
+      <button class="red-button">OFERTAS</button>
+      <button class="red-button">REPORTES</button>
+    </div>
+  </div>
+  
